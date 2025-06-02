@@ -1,0 +1,52 @@
+@import 'tailwindcss';
+
+@plugin 'flowbite/plugin';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary-50: #f9fff2;
+  --color-primary-100: #ecf7df;
+  --color-primary-200: #eaffd1;
+  --color-primary-300: #d8ffa8;
+  --color-primary-400: #ccff8c;
+  --color-primary-500: #c0ff70;
+  --color-primary-600: #8bbf47;
+  --color-primary-700: #45ad23;
+  --color-primary-800: #038a3d;
+  --color-primary-900: #00635e;
+
+  --color-secondary-50: #f0f9ff;
+  --color-secondary-100: #e0f2fe;
+  --color-secondary-200: #bae6fd;
+  --color-secondary-300: #7dd3fc;
+  --color-secondary-400: #38bdf8;
+  --color-secondary-500: #0ea5e9;
+  --color-secondary-600: #0284c7;
+  --color-secondary-700: #0369a1;
+  --color-secondary-800: #075985;
+  --color-secondary-900: #0c4a6e;
+}
+
+@source "../node_modules/flowbite-svelte/dist";
+@source "../node_modules/flowbite-svelte-icons/dist";
+
+@layer base {
+  /* disable chrome cancel button */
+  input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+  }
+}
+
+* {
+    font-family: 'Outfit', sans-serif;
+}
+
+.elki-bg {
+    @apply bg-green-950 fixed top-0 left-0 w-full h-full -z-50 blur-3xl bg-cover opacity-50 brightness-50;
+    background-image: url('/favicon.png');
+}
+
+b {
+    @apply font-bold text-pink-500;
+}
